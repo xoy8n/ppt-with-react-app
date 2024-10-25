@@ -37,9 +37,11 @@ const SlideComponent: React.FC<SlideProps> = ({ slide, isActive, activeTab, setA
                     {slide.tabs && (
                         <>
                             <Tabs>
+                                <ul>
                                 {slide.tabs.map((tab, index) => (
                                     <Tab key={index} tab={tab} index={index} isActive={activeTab === tab.id} onClick={handleTabClick} />
                                 ))}
+                                </ul>
                             </Tabs>
                             {slide.tabs.map((tab, index) => (
                                 <TabContent key={index} tab={tab} index={index} isActive={activeTab === tab.id} id={`GCTab${index + 1}`} role="tabpanel" aria-labelledby={`GCTab${index + 1}`} />

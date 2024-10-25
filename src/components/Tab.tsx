@@ -10,6 +10,7 @@ interface TabProps {
 
 const Tab: React.FC<TabProps> = ({ tab, index, isActive, onClick }) => {
     return (
+        <li>
         <button
             className={`tablinks ${isActive ? 'active' : ''}`}
             role="tab"
@@ -19,6 +20,7 @@ const Tab: React.FC<TabProps> = ({ tab, index, isActive, onClick }) => {
         >
             {tab.heading}
         </button>
+        </li>
     );
 };
 
