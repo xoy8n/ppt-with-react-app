@@ -202,6 +202,7 @@ export const slidesData: Slide[] = [
                         items: [
                             "다소 느린 응답 속도",
                             "current 파일이 바뀔때마다 매번 설명해야함",
+                            "자연어 위주의 명령어",
                             "컨텍스트 기반의 자동완성기능으로 데이터 기반 학습이 부재하여 복잡한 코드를 자동완성하는데는 어려움",
                             "webStorm은 터미널 오류 설명기능 부재 (현재 pycharm만 제공)",
                             "webStorm은 merge with AI 기능 부재(현재 pycharm만 제공)",
