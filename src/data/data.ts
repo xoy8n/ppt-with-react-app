@@ -43,8 +43,21 @@ export const slidesData: Slide[] = [
     {
         title: "AI 플러그인 with WebStorm",
         columnContents: [
-            { link: "https://github.com/features/copilot/getting-started", imgSrc: "/img/copilot.webp", imgAlt: "copilot", heading: "GitHub Copilot", description: "Github & OpenAI Codex 기반의 코드 자동 완성 도구" },
-            { link: "https://www.jetbrains.com/ai/#plans-and-pricing", imgSrc: "/img/jetbrain.webp", imgAlt: "jetbrains", heading: "JetBrains AI", description: "JetBrains IDE와 통합된 Intellij 기반 AI 도구" }]
+            {
+                link: "https://github.com/features/copilot/getting-started",
+                imgSrc: "/img/copilot.webp",
+                imgAlt: "copilot",
+                heading: "GitHub Copilot",
+                description: "Github & OpenAI Codex 기반의 코드 자동 완성 도구"
+            },
+            {
+                link: "https://www.jetbrains.com/ai/#plans-and-pricing",
+                imgSrc: "/img/jetbrain.webp",
+                imgAlt: "jetbrains",
+                heading: "JetBrains AI",
+                description: "JetBrains IDE와 통합된 Intellij 기반 AI 도구"
+            }
+            ]
     },
     {
         title: "Github Copilot",
@@ -139,7 +152,7 @@ export const slidesData: Slide[] = [
                         items: [
                             "금액(개인) : $10(13000원) / 월",
                             "무료 기간 : 7일",
-                            "보안 : 현재 세션 내에서만 코드 분석 후 종료"
+                            "보안 : 하나의 IDE 세션 동안 채팅 내역을 유지 후 restart시 종료"
                         ]
                     }
                 ]
