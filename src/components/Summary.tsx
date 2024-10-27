@@ -21,7 +21,7 @@ const SummarySlide: React.FC<SummarySlideProps> = ({ data }) => {
                     </div>
                     <ul>
                     {content.items.map((item, i) => (
-                            <li key={i}>📍 {item}</li>
+                            <li key={i}>📌 {item}</li>
                         ))}
                     </ul>
                 </InnerOneCont>
