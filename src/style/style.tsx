@@ -68,7 +68,7 @@ export const SlideContainer = styled.div`
     display: none;
     max-width: 1180px;
     min-width: 900px;
-    height: -webkit-fill-available;
+    height: calc(100% - 120px);
     color: white;
     margin: 0 auto;
     padding: 60px 0;
@@ -86,6 +86,7 @@ export const SlideOuterCont = styled.div`
     row-gap: 50px;
     height: 100%;
     text-align: center;
+    overflow-y: scroll;
 `;
 
 export const MainTitle = styled.h2`
