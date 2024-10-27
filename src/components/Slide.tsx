@@ -1,10 +1,9 @@
 import React from 'react';
 import { Slide as SlideType } from '../data/data';
-import { SlideContainer, SlideOuterCont, MainTitle, SlideInnerCont, Cont, Link, Tabs } from '../style/style';
+import { SlideContainer, SlideOuterCont, MainTitle, SlideInnerCont, Cont, Link, Tabs, SmallLink , SummaryCont} from '../style/style';
 import Tab from './Tab';
 import TabContent from './TabContent';
 import Table from './Table';
-import Summary from "./Summary"; // Import Table component
 
 interface SlideProps {
     slide: SlideType;
@@ -25,17 +24,30 @@ const SlideComponent: React.FC<SlideProps> = ({ slide, isActive, activeTab, setA
             <SlideOuterCont>
                 <MainTitle>{slide.title}</MainTitle>
                 <SlideInnerCont hasTabs={!!slide.tabs}>
-                    {slide.oneSlideContents && <Summary data={{oneSlideContents: slide.oneSlideContents}} />}
                     {slide.columnContents && slide.columnContents.map((content, index) => (
-                        <Cont key={index}>
-                            {content.link && (
-                                <Link href={content.link} target="_blank" rel="noopener noreferrer">
+                        content.items ? (
+                            <SummaryCont key={index}>
+                                <SmallLink href={content.link} target="_blank" rel="noopener noreferrer">
                                     <img src={content.imgSrc} alt={content.imgAlt} />
-                                </Link>
-                            )}
-                            <h3>{content.heading}</h3>
-                            {content.description && <p>{content.description}</p>}
-                        </Cont>
+                                </SmallLink>
+                                <h3>{content.heading}</h3>
+                                {content.description && <p>{content.description}</p>}
+                                <ul>
+                                    {content.items.map((item, i) => (
+                                        <li key={i}>📍 {item}</li>
+                                    ))}
+                                </ul>
+                            </SummaryCont>
+                            ) : (
+                                <Cont key={index}>
+                                    <Link href={content.link} target="_blank" rel="noopener noreferrer">
+                                        <img src={content.imgSrc} alt={content.imgAlt} />
+                                    </Link>
+                                    <h3>{content.heading}</h3>
+                                    {content.description && <p>{content.description}</p>}
+                                </Cont>
+                        )
+
                     ))}
                     {slide.tabs && (
                         <>

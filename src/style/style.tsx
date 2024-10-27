@@ -71,7 +71,7 @@ export const SlideContainer = styled.div`
     height: -webkit-fill-available;
     color: white;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 60px 0;
 
     &.active {
         display: block;
@@ -110,9 +110,11 @@ export const Cont = styled.div`
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     row-gap: 30px;
-
+    align-items: center;
+    padding: 40px 20px;
+    
     & img {
         width: 250px;
         height: 100%;
@@ -124,9 +126,32 @@ export const Cont = styled.div`
         }
 
     & p {
-        font-size: 18px;
+        font-size: 22px;
+        
     }
 `
+export const SummaryCont = styled(Cont)`
+    row-gap: 50px;
+    justify-content: flex-start;
+    & p {
+        font-weight: 600;
+    }
+    & > a {
+        width: 150px;
+        height: 150px;
+        & img{
+          width: 100%;
+        }
+    }
+    & ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+`
+
 
 export const InnerOneCont = styled.div`
     display: flex;
@@ -159,6 +184,10 @@ export const Link = styled.a`
     width: 100%;
     height: 250px;
 `;
+
+export const SmallLink = styled(Link)`
+height: 100px;
+`
 
 export const NumberText = styled.span`
     display: block;
