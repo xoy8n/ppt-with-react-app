@@ -171,7 +171,7 @@ export const slidesData: Slide[] = [
                         "get_git_diff_all: 아직 커밋되지 않은 모든 로컬 변경 내용을 확인",
                         "get_outgoing_changes: 로컬에서 변경된 내용을 확인",
                         "get_vcs_log: 프로젝트의 버전 컨트롤 로그를 확인",
-                        "open_commit: 특정 커밋의 변경 내용을 확인",
+                        "open_commit: 특정 커밋의 변경 내용 확인",
                         ]
                     },
                     { subtitle: "기능",
