@@ -8,7 +8,7 @@ interface TableProps {
 }
 
 const Table: React.FC<TableProps> = ({ data }) => {
-    const headers = ["특징", "GitHub Copilot", "JetBrains AI", "codeium"];
+    const headers = ["특징", "GitHub Copilot", "JetBrains AI"];
 
     return (
         <Tables>

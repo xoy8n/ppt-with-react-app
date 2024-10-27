@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { slidesData, Slide } from '../data/data';
+import { slidesData} from '../data/data';
 import SlideComponent from './Slide';
 import { MainContainer, NumberText, SlidesWrapper } from '../style/style';
 

@@ -66,7 +66,8 @@ export const SlidesWrapper = styled.div`
 
 export const SlideContainer = styled.div`
     display: none;
-    width: 1180px;
+    max-width: 1180px;
+    min-width: 900px;
     height: -webkit-fill-available;
     color: white;
     margin: 0 auto;
@@ -126,6 +127,33 @@ export const Cont = styled.div`
         font-size: 18px;
     }
 `
+
+export const InnerOneCont = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    & > div, ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    & > div{
+        row-gap: 50px;
+        & > h3{
+            font-size: 35px;
+        }
+    }
+    & > ul{
+        row-gap: 30px;
+        & > li{
+            font-size: 25px;
+            line-height: 1.4;
+        }
+    }
+`
+
 export const Link = styled.a`
     display: block;
     width: 100%;
@@ -152,6 +180,8 @@ export const Tabs = styled.nav`
     ul{
         display: flex;
         justify-content: space-around;
+        width: 100%;
+        height: 100%;
     }
     li{
         width: 100%;
@@ -201,16 +231,17 @@ export const InnerTabCont = styled.article`
     row-gap: 50px;
 
     h4 {
-        font-size: 30px;
+        font-size: 35px;
         font-weight: 600;
     }
 
     ul {
         list-style: none;
         display: flex;
-        flex-direction: column;
-        row-gap: 15px;
+        flex-direction: column; 
+        row-gap: 10px;
         font-size: 20px;
+        line-height: 1.4;
     }
 `;
 
@@ -230,20 +261,25 @@ export const Tables = styled.table`
         font-size: 20px;
 
         th {
-            border-right: 1px solid #777;
             width: 25%;
         }
     }
 
     th, td {
         padding: 12px 15px;
-        border: 1px solid #555;
+        border: 1px solid #777;
         border-bottom: none;
+        vertical-align: middle;
     }
 
-    td.active {
-        background-color: white;
-        color: black;
-        font-weight: 600;
+    td {
+        &.active{
+            background-color: white;
+            color: black;
+            font-weight: 900;
+        }
+        &:first-child {
+            background-color: #555;
+        }
     }
 `;

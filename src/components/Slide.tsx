@@ -3,7 +3,8 @@ import { Slide as SlideType } from '../data/data';
 import { SlideContainer, SlideOuterCont, MainTitle, SlideInnerCont, Cont, Link, Tabs } from '../style/style';
 import Tab from './Tab';
 import TabContent from './TabContent';
-import Table from './Table'; // Import Table component
+import Table from './Table';
+import Summary from "./Summary"; // Import Table component
 
 interface SlideProps {
     slide: SlideType;
@@ -18,12 +19,14 @@ const SlideComponent: React.FC<SlideProps> = ({ slide, isActive, activeTab, setA
         setActiveTab(tabId);
     };
 
+
     return (
         <SlideContainer className={isActive ? 'active' : ''}>
             <SlideOuterCont>
                 <MainTitle>{slide.title}</MainTitle>
                 <SlideInnerCont hasTabs={!!slide.tabs}>
-                    {slide.contents && slide.contents.map((content, index) => (
+                    {slide.oneSlideContents && <Summary data={{oneSlideContents: slide.oneSlideContents}} />}
+                    {slide.columnContents && slide.columnContents.map((content, index) => (
                         <Cont key={index}>
                             {content.link && (
                                 <Link href={content.link} target="_blank" rel="noopener noreferrer">

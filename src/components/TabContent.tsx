@@ -7,8 +7,8 @@ interface TabContentProps {
     index: number;
     isActive: boolean;
     id: string;
-    role: string; // Add this line
-    'aria-labelledby': string; // Add this line
+    role: string;
+    'aria-labelledby': string;
 }
 
 const TabContent: React.FC<TabContentProps> = ({ tab, index, isActive, id, role, 'aria-labelledby': ariaLabelledBy }) => {
@@ -16,7 +16,7 @@ const TabContent: React.FC<TabContentProps> = ({ tab, index, isActive, id, role,
         <TabContents id={id} className={isActive ? 'active' : ''} role={role} aria-labelledby={ariaLabelledBy}>
             {tab.sections.map((section, sectionIndex) => (
                 <InnerTabCont key={sectionIndex}>
-                    <h4>{section.subtitle}</h4>
+                    <h4>✔ {section.subtitle}</h4>
                     <ul>
                         {section.items.map((item, itemIndex) => (
                             <li key={itemIndex}>{item}</li>
