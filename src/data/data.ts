@@ -71,7 +71,7 @@ export const slidesData: Slide[] = [
                             "AI 기반 코드 자동 완성 도구",
                             "OpenAI Codex 모델 사용",
                             "GitHub에서 직접 AI 기반의 코드 제안"
-                        ]
+                        ],
                     },
                     { subtitle: "주요 특징",
                         items: [
@@ -162,16 +162,18 @@ export const slidesData: Slide[] = [
                 heading: "사용법",
                 sections: [
                     { subtitle: "명령어",
-                        items: ["get_selected_current_file: 현재 선택된 파일의 내용을 가져오기",
-                        "get_code_at_caret: 현재 커서 위치 또는 선택된 코드 프래그먼트의 내용을 가져오기",
-                        "get_opened_files: 현재 열려 있는 파일들의 목록을 가져오기",
-                        "exact_search: 특정 클래스, 파일, 메소드, 또는 심볼을 정확하게 검색",
-                        "find_text: 프로젝트 안에서 특정 텍스트 패턴을 검색",
-                        "find_usages: 특정 심볼의 사용처를 찾기",
-                        "get_git_diff_all: 아직 커밋되지 않은 모든 로컬 변경 내용을 확인",
-                        "get_outgoing_changes: 로컬에서 변경된 내용을 확인",
-                        "get_vcs_log: 프로젝트의 버전 컨트롤 로그를 확인",
-                        "open_commit: 특정 커밋의 변경 내용 확인",
+                        items: [
+                            "get_selected_current_file: 현재 선택된 파일의 내용을 가져오기",
+                            "get_code_at_caret: 현재 커서 위치 또는 선택된 코드 프래그먼트의 내용을 가져오기",
+                            "get_opened_files: 현재 열려 있는 파일들의 목록을 가져오기",
+                            "exact_search: 특정 클래스, 파일, 메소드, 또는 심볼을 정확하게 검색",
+                            "find_text: 프로젝트 안에서 특정 텍스트 패턴을 검색",
+                            "find_usages: 특정 심볼의 사용처를 찾기",
+                            "get_git_diff_all: 아직 커밋되지 않은 모든 로컬 변경 내용을 확인",
+                            "get_vcs_log: 프로젝트의 버전 컨트롤 로그를 확인",
+                            "open_commit: 특정 커밋의 변경 내용 확인",
+                            "#file: 현재 열려 있는 파일의 내용을 가져오기",
+                            "/explain, /refactor: 설명, 리팩토링 제안",
                         ]
                     },
                     { subtitle: "기능",
